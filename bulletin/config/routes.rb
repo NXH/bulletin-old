@@ -1,4 +1,8 @@
 Bulletin::Application.routes.draw do
+  get("/landing", {:controller => 'pages', :action => 'landing'})
+  get("/user-home", {:controller => 'pages', :action => 'user_home'})
+  get("/create-account", {:controller => 'pages', :action => 'create_account'})
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,7 +43,7 @@ Bulletin::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
