@@ -2,6 +2,7 @@ Bulletin::Application.routes.draw do
   get("/landing", {:controller => 'pages', :action => 'landing'})
   get("/user-home", {:controller => 'pages', :action => 'user_home'})
   get("/create-account", {:controller => 'pages', :action => 'create_account'})
+  get("/event/:event_id", {:controller => 'pages', :action => 'event'})
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

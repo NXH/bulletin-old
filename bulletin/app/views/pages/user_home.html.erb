@@ -1,11 +1,33 @@
 <html lang="en">
   <body>
+    <div class = "container">
+      <div class = "jumbotron">
+        <h1>Your Calendar</h1>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <h1>Your Calendar</h1>
-          <img src="outlook-calendar-example.png" class="calendar" href"">
+
+          <h1>Your Upcoming Events</h1>
+
+          <div class = "list-group">
+            <% @events = Event.all %>
+            <% @events.each do |event| %>
+              <a href="/event/<%= event.id%>" class = "list-group-item">
+                <h3 class = "list-group-item-heading">
+                  <%= event.title %>
+                </h3>
+                <p class = "list-group-item-text">
+                  <%= event.start_time.to_formatted_s(:long_ordinal) %>
+                </p>
+              </a>
+            <% end %>
+          </div>
+
         </div>
+
         <div class="col-lg-4">
           <h1>Add Event</h1>
           <form role="form">
@@ -45,23 +67,12 @@
               <option>Volunteering</option>
               <option>Travel</option>
             </select>
+            <div>
+              <a type="submit" class="btn btn-success" href="/user-home">Submit</a>
             </div>
-            <a type="submit" class="btn btn-success" href="/user-home">Submit</a>
           </form>
         </div>
       </div>
     </div>
-
-    <div class="container">
-      <div class="row">
-      </div>
-    </div>
-
-
-    <div class="container">
-      <footer>
-        <p>&copy; Bulletin 2013</p>
-      </footer>
-    </div> <!-- /container -->
   </body>
 </html>
