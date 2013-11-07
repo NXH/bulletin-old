@@ -1,0 +1,21 @@
+<html lang="en">
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class = "panel panel-default">
+            <div class = "panel-heading">
+              <h1> <%= @e.title %> </h1>
+            </div>
+            <div class ="panel-body">
+              <h3> Description: </h3> <h4><%= @e.description %> </h4>
+              <h3> Location: </h3> <h4><%= @e.location %> </h4>
+              <h3> Start Time: </h3> <h4><%= @e.start_time.to_formatted_s(:long_ordinal) %> </h4>
+              <h3> End Time: </h3> <h4><%= @e.end_time.to_formatted_s(:long_ordinal) %> </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

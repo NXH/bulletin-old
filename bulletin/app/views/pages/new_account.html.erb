@@ -1,0 +1,32 @@
+<html lang="en">
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to Bulletin!</h1>
+        <p>You're only a minute way from unparalleled levels of organization</p>
+      </div>
+    </div>
+
+    <div class="container">
+     <form role="form" action = "http://localhost:3000/create_account">
+      <div class="form-group">
+        <label for="contributor-one">Participant 1</label>
+        <input type="text" class="form-control" id="contributor-one" placeholder="Name" name = "person1">
+      </div>
+      <div class="form-group">
+        <label for="contributor-two">Participant 2</label>
+        <input type="text" class="form-control" id="contributor-two" placeholder="Name" name = "person2">
+      </div>
+      <div class="form-group">
+        <label for="account-id">Calender Name / User ID</label>
+        <input type="text" class="form-control" id="account-id" placeholder="Calendar Name" name = "nickname">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name = "password_digest">
+      </div>
+      <input type="submit" class="btn btn-success" value = "Submit">
+    </form>
+  </div>
+  </body>
+</html>

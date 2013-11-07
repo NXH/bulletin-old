@@ -1,32 +1,25 @@
 <html lang="en">
   <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Welcome to Bulletin!</h1>
-        <p>You're only a minute way from unparalleled levels of organization</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class = "panel panel-default">
+            <div class = "panel-heading">
+              <h1> Thanks for joining Bulletin! </h1>
+              <h3> Your account information is below:</h3>
+            </div>
+            <div class ="panel-body">
+              <h4> Calendar Name: </h4> <h5><%= @t.nickname %> </h5>
+              <h4> Contributor One: </h4> <h5><%= @t.person1 %> </h5>
+              <h4> Contributor Two: </h4> <h5><%= @t.person2 %> </h5>
+              <h4> Password: </h4> <h5><%= @t.password_digest %> </h5>
+            </div>
+          </div>
+            <div>
+              <a type = "submit" class = "btn btn-Success" href ="http://localhost:3000/user_home">Continue</a>
+            </div>
+        </div>
       </div>
     </div>
-
-    <div class="container">
-     <form role="form">
-      <div class="form-group">
-        <label for="contributor-one">Participant 1</label>
-        <input type="text" class="form-control" id="contributor-one" placeholder="Name">
-      </div>
-      <div class="form-group">
-        <label for="contributor-two">Participant 2</label>
-        <input type="text" class="form-control" id="contributor-two" placeholder="Name">
-      </div>
-      <div class="form-group">
-        <label for="account-id">Calender Name / User ID</label>
-        <input type="text" class="form-control" id="account-id" placeholder="Calendar Name">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <a type="submit" class="btn btn-success" href="/user-home">Submit</a>
-    </form>
-  </div>
   </body>
 </html>

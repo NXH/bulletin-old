@@ -30,35 +30,35 @@
 
         <div class="col-lg-4">
           <h1>Add Event</h1>
-          <form role="form">
+          <form role = "form" action = "http://localhost:3000/create_event">
             <div class="form-group">
               <label for="event-name">Title</label>
-              <input type="text" class="form-control" id="event-name" placeholder="Event name">
+              <input type="text" class="form-control" id="event-name" placeholder="Event name" name="title">
             </div>
             <div class="form-group">
               <label for="event-description">Description</label>
-              <input type="text" class="form-control" id="event-description" placeholder="What's going on?">
+              <input type="text" class="form-control" id="event-description" placeholder="What's going on?" name="description">
             </div>
             <div class="form-group">
               <label for="event-location">Location</label>
-              <input type="text" class="form-control" id="event-loc" placeholder="Where's it going down?">
+              <input type="text" class="form-control" id="event-loc" placeholder="Where's it going down?" name="location">
             </div>
             <div class="form-group">
               <label for="start-time">Start Time</label>
-              <input type="datetime-local" class="form-control" id="start-time" placeholder="">
+              <input type="datetime-local" class="form-control" id="start-time" placeholder="" name="start_time">
             </div>
             <div class="form-group">
               <label for="end-time">End Time</label>
-              <input type="datetime-local" class="form-control" id="end-time" placeholder="">
+              <input type="datetime-local" class="form-control" id="end-time" placeholder="" name="end_time">
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="">Person 1</input>
+                <input type="checkbox" value="" name="person1">Person 1</input>
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="">Person 2</input>
+                <input type="checkbox" value="" name="person2">Person 2</input>
               </label>
             </div>
             <select class="form-control">
@@ -67,9 +67,7 @@
               <option>Volunteering</option>
               <option>Travel</option>
             </select>
-            <div>
-              <a type="submit" class="btn btn-success" href="/user-home">Submit</a>
-            </div>
+            <input type="submit" class="btn btn-success" value = "Submit">
           </form>
         </div>
       </div>
